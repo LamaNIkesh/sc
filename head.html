@@ -1,0 +1,64 @@
+<?php
+$flag=0;
+if (file_exists ("Libraries/database.txt")){
+$data= file("Libraries/database.txt");
+for ($line = 0; $line < count($data); ++$line){
+	$userData=explode(" ",$data[$line]);
+	if ($userData[3]=="1"){
+		$flag=1;
+		$userLogged=$userData[0];
+	}
+}
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Si elegans</title>
+<link rel="stylesheet" href="styles2.css">
+<link rel="icon" href="Pictures/favicon.ico">
+<meta name="keywords" content="Se elegans, elegans, modelling, simulation">
+<meta name="description" content="Simulation of C. elegans">
+<meta name="author" content="Alicia Costalago Meruelo">
+
+	<script src="vis/dist/vis.js"></script>
+	
+	<link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
+	
+	<!-- Plotly.js -->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript" async
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+	</script>
+	
+</head>
+<body>
+<header>
+
+<img src="Pictures/Si_elegans.png" alt="Si elegans logo" align="right" width="455" height="126">
+<h1><em>Si elegans</em> Project</h1>
+</header>
+<?php if ($flag==1){
+?>
+<p align="right" style="color:black"><?php echo $userLogged; ?> logged in.</p>
+<?php
+}
+?>
+<nav>
+<ul id="menu">
+  <li><a href="home.php">Home</a></li>
+  <li><a href="project.php">Project</a></li>
+  <li><a href="news.php">News</a></li>
+  <li><a href="publications.php">Publications</a></li>
+  <li><a href="account.php">Manage your account</a></li>
+  <li><a href="logged2.php">Builder/Viewer</a></li>
+  <li><a href="login.php">Log in</a></li>
+  <li><a href="logout.php">Log out</a></li>
+  <li><a href="register.php">Register</a></li>
+</ul>
+</nav>
+<br>
