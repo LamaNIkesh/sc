@@ -1,6 +1,8 @@
 <?php
 include("head.html")
 ?>
+    <script type="text/javascript" src="dist/vis.js"></script>
+    <link href="dist/vis.css" rel="stylesheet" type="text/css" />	
     <script type="text/javascript">
         var nodes, edges, network;
         // convenience method to stringify a JSON object
