@@ -15,16 +15,18 @@ for ($line = 0; $line < count($data); ++$line){
 }
 if ($flag==0){
 ?>
+<div class= "container" >
 <br><br>
-<form action="logged.php" method="post">
+<form action="loginProcess.php" method="post">
 <fieldset>
 <legend>Log in</legend>
 <br>User name:<br><input type="text" name="user" required><br><br>
 Password:<br><input type="password" name="pass" required><br><br>
-<input type="submit">
+<input type="submit" value = "login">
 </fieldset>
 </form>
 <br><br>
+</div>
 <?php
 }
 else{

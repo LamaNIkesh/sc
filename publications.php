@@ -1,8 +1,16 @@
 <?php
 include("head.html")
 ?>
-<h1>Publications</h1>
-<h2>2015</h2>
+<div class = "container">
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Publications</h2>
+  </div>
+  <div class="panel-body">
+    <h2>2015</h2>
+
 <p>
 Costalago Meruelo, A., Machado, P., Appiah, K., and Mcginnity, M. Si elegans: 
 <em>A computational model of C. elegans muscle response to light</em>
@@ -112,6 +120,10 @@ emulation of C. elegans nematode nervous system</em> at the 2014 Sixth World
 Congress on Nature and Biologically Inspired Computing (NaBIC), 65-71 (2014).
 </p>
 <br><br>
+  </div>
+</div>
+
+</div>
 <?php
 include("end_page.html")
 ?>

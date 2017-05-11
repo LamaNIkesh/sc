@@ -1,64 +1,63 @@
-<?php
-$flag=0;
-if (file_exists ("Libraries/database.txt")){
-$data= file("Libraries/database.txt");
-for ($line = 0; $line < count($data); ++$line){
-	$userData=explode(" ",$data[$line]);
-	if ($userData[3]=="1"){
-		$flag=1;
-		$userLogged=$userData[0];
-	}
-}
-}
-?>
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 <head>
 <title>Si elegans</title>
-<link rel="stylesheet" href="styles2.css">
-<link rel="icon" href="Pictures/favicon.ico">
-<meta name="keywords" content="Se elegans, elegans, modelling, simulation">
-<meta name="description" content="Simulation of C. elegans">
-<meta name="author" content="Alicia Costalago Meruelo">
-
-	<script src="vis/dist/vis.js"></script>
-	
-	<link href="vis/dist/vis.css" rel="stylesheet" type="text/css" />
-	
-	<!-- Plotly.js -->
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	
-	<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-	</script>
-	<script type="text/javascript" async
-	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
-	</script>
-	
+<link rel="icon" href="Pictures/titlelogo.png" >
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src = "js/click.js"></script>
 </head>
 <body>
-<header>
+<div class = "container">
+	
+	<div class="row">
+		
+		<div class="col-sm-4 ">
+		<div class="content-wrapper" style="margin-top:10px; margin-bottom:5px">
+		<img src = "Pictures/mainlogo.png" alt = "ntu logo" width = "480" height = "100" margin-top = "100px">
+		</div>
+		</div>
+		<div class = "col-sm-5"></div>
+		<!--<div class="col-sm-4"><img src="Pictures/Si_elegans.png" alt="Si elegans logo" width="370" height="110"></div>-->
+		<div class="col-sm-3 spaced-row">
+		<div class = "content-wrapper" style = "margin-top:15px; position:right ;margin-bottom:5px;">
+		<img src = "Pictures/neuron.png" alt = "ntu logo" width = "300" height = "120">
+		</div>
+		</div>
+	</div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav nav-tabs">
+        <li class = "active"><a href="home.php">Home</a></li>
+		
+		<li><a href="news.php">News</a></li>
+		<li><a href="project.php">Project</a></li>
+		<li><a href="publications.php">Publication</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="">System Builder <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="build.php">Create your own topology</a></li>
+            <li><a href="#">Use C elegans topology</a></li>
+            <li><a href="#">Plot Results</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Manage Your Account</a></li>
+        <li><a href="#">About Us</a></li>
+		
 
-<img src="Pictures/Si_elegans.png" alt="Si elegans logo" align="right" width="455" height="126">
-<h1><em>Si elegans</em> Project</h1>
-</header>
-<?php if ($flag==1){
-?>
-<p align="right" style="color:black"><?php echo $userLogged; ?> logged in.</p>
-<?php
-}
-?>
-<nav>
-<ul id="menu">
-  <li><a href="home.php">Home</a></li>
-  <li><a href="project.php">Project</a></li>
-  <li><a href="news.php">News</a></li>
-  <li><a href="publications.php">Publications</a></li>
-  <li><a href="account.php">Manage your account</a></li>
-  <li><a href="logged2.php">Builder/Viewer</a></li>
-  <li><a href="login.php">Log in</a></li>
-  <li><a href="logout.php">Log out</a></li>
-  <li><a href="register.php">Register</a></li>
-</ul>
+        <li><a href="register.php" style = "position:right;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
-<br>
+  
+
+
+		</div>
+			
+	</div>
+</div>
+

@@ -2,6 +2,8 @@
 include("head.html")
 ?>
 <?php
+echo "flag..".$_SESSION['flag'];
+
 $flag=0;
 if (file_exists ("Libraries/database.txt")){
 $data= file("Libraries/database.txt");
@@ -25,7 +27,7 @@ for ($line = 0; $line < count($data); ++$line){
 fclose($file);
 
 }
-if ($flag==1){
+if ($_SESSION['flag']==1){
 //Create new document
 $dom = new DOMDocument("1.0");
 $dom->formatOutput = true;
